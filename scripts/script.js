@@ -1,30 +1,28 @@
-let h = document.querySelector(".digit-clock__hours");
-let m = document.querySelector(".digit-clock__minutes");
-let s = document.querySelector(".digit-clock__seconds");
-let week = document.querySelectorAll(".digit-clock__item");
-let am = document.querySelector(".digit-clock__am");
-let pm = document.querySelector(".digit-clock__pm");
-let btnOn = document.querySelector(".digit-clock__btn-toggle-on");
-let btnOff = document.querySelector(".digit-clock__btn-toggle-off");
-let digitClock = document.querySelector(".digit-clock");
-let btnHPlus = document.querySelector(".digit-clock__btn-h-plus");
-let btnHMinus = document.querySelector(".digit-clock__btn-h-minus");
-let btnMPlus = document.querySelector(".digit-clock__btn-m-plus");
-let btnMMinus = document.querySelector(".digit-clock__btn-m-minus");
-let inputH = document.querySelector(".digit-clock__input-h");
-let inputM = document.querySelector(".digit-clock__input-m");
-let inputAm = document.querySelector(".digit-clock__input-am");
-let inputPm = document.querySelector(".digit-clock__input-pm");
-let radioList = document.querySelectorAll('input[type="radio"]');
-
-
+const h = document.querySelector(".digit-clock__hours");
+const m = document.querySelector(".digit-clock__minutes");
+const s = document.querySelector(".digit-clock__seconds");
+const week = document.querySelectorAll(".digit-clock__item");
+const am = document.querySelector(".digit-clock__am");
+const pm = document.querySelector(".digit-clock__pm");
+const btnOn = document.querySelector(".digit-clock__btn-toggle-on");
+const btnOff = document.querySelector(".digit-clock__btn-toggle-off");
+const digitClock = document.querySelector(".digit-clock");
+const btnHPlus = document.querySelector(".digit-clock__btn-h-plus");
+const btnHMinus = document.querySelector(".digit-clock__btn-h-minus");
+const btnMPlus = document.querySelector(".digit-clock__btn-m-plus");
+const btnMMinus = document.querySelector(".digit-clock__btn-m-minus");
+const inputH = document.querySelector(".digit-clock__input-h");
+const inputM = document.querySelector(".digit-clock__input-m");
+const inputAm = document.querySelector(".digit-clock__input-am");
+const inputPm = document.querySelector(".digit-clock__input-pm");
+const radioList = document.querySelectorAll('input[type="radio"]');
 
 function runMusic() {
   if (localStorage.music == +inputM.textContent) {
     window.open("https://www.youtube.com/watch?v=-NMph943tsw");
   }
   localStorage.music = 1000;
-} 
+}
 
 inputH.textContent = +localStorage.h || 0;
 inputM.textContent = +localStorage.m || 0;
@@ -66,8 +64,6 @@ if (localStorage.off === "true") {
   btnOff.style.backgroundColor = "red";
 }
 
-
-
 digitClock.addEventListener("click", (e) => {
   if (e.target.classList.contains("digit-clock__btn-toggle-on")) {
     localStorage.on = true;
@@ -75,12 +71,14 @@ digitClock.addEventListener("click", (e) => {
     btnOff.style.backgroundColor = "transparent";
     btnOn.style.backgroundColor = "green";
   }
+
   if (e.target.classList.contains("digit-clock__btn-toggle-off")) {
     localStorage.on = false;
     localStorage.off = true;
     btnOn.style.backgroundColor = "transparent";
     btnOff.style.backgroundColor = "red";
   }
+
   if (e.target.classList.contains("digit-clock__btn-h-plus")) {
     inputH.textContent = +inputH.textContent + 1;
     localStorage.h = +inputH.textContent;
@@ -90,9 +88,9 @@ digitClock.addEventListener("click", (e) => {
     if (+inputH.textContent >= 0) {
       btnHMinus.disabled = false;
     }
-
     inputH.textContent = localStorage.h;
   }
+
   if (e.target.classList.contains("digit-clock__btn-h-minus")) {
     inputH.textContent = +inputH.textContent - 1;
     localStorage.h = +inputH.textContent;
@@ -104,6 +102,7 @@ digitClock.addEventListener("click", (e) => {
     }
     inputH.textContent = localStorage.h;
   }
+
   if (e.target.classList.contains("digit-clock__btn-m-plus")) {
     inputM.textContent = +inputM.textContent + 1;
     localStorage.m = +inputM.textContent;
@@ -116,6 +115,7 @@ digitClock.addEventListener("click", (e) => {
     }
     inputM.textContent = localStorage.m;
   }
+
   if (e.target.classList.contains("digit-clock__btn-m-minus")) {
     inputM.textContent = +inputM.textContent - 1;
     localStorage.m = +inputM.textContent;
@@ -128,12 +128,14 @@ digitClock.addEventListener("click", (e) => {
     }
     inputM.textContent = localStorage.m;
   }
+
   if (e.target.classList.contains("digit-clock__input-am")) {
     localStorage.am = inputAm.value;
     delete localStorage.pm;
     inputAm.checked = true;
     inputPm.removeAttribute("checked");
   }
+
   if (e.target.classList.contains("digit-clock__input-pm")) {
     localStorage.pm = inputPm.value;
     delete localStorage.am;
@@ -147,7 +149,7 @@ setInterval(() => {
   let hours = date.getHours();
   let minutes = date.getMinutes();
   let seconds = date.getSeconds();
-  d = date.getDay();
+  let d = date.getDay();
 
   if (hours >= 12) {
     hours = hours - 12;
@@ -194,7 +196,7 @@ setInterval(() => {
       minutes === +inputM.textContent &&
       localStorage.pm
     ) {
-      runMusic(); 
+      runMusic();
     }
   }
 });
