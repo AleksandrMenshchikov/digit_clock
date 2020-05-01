@@ -28,6 +28,8 @@ function runMusic() {
 
 inputH.textContent = +localStorage.h || 0;
 inputM.textContent = +localStorage.m || 0;
+btnOn.style.backgroundColor = "transparent";
+btnOff.style.backgroundColor = "red";
 
 if (+inputH.textContent === 0) {
   btnHMinus.disabled = true;
@@ -63,6 +65,8 @@ if (localStorage.off === "true") {
   btnOn.style.backgroundColor = "transparent";
   btnOff.style.backgroundColor = "red";
 }
+
+
 
 digitClock.addEventListener("click", (e) => {
   if (e.target.classList.contains("digit-clock__btn-toggle-on")) {
