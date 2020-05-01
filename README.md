@@ -11,6 +11,6 @@
 
 **Сайт**
 
-* [Ссылка на сайт](https://aleksandrmenshchikov.github.io/russian-travel/index.html)
+* [Ссылка на сайт](https://aleksandrmenshchikov.github.io/digit_clock/index.html)
 
 
