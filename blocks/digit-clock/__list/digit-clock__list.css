@@ -1,0 +1,11 @@
+.digit-clock__list {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  justify-content: space-evenly;
+  color: black;
+}

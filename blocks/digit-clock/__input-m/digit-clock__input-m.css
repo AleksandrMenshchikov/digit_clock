@@ -1,0 +1,8 @@
+.digit-clock__input-m {
+  display: inline-block;
+  width: 20px;
+  border: 2px solid white;
+  height: 19px;
+  text-align: center;
+  color: white;
+}

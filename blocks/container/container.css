@@ -1,0 +1,27 @@
+.container {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  flex-basis: 900px;
+  background-color: gray;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  min-height: 350px;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 690px) {
+  .container {
+    min-height: 250px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    min-height: 200px;
+  }
+}

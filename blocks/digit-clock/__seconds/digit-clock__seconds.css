@@ -1,0 +1,19 @@
+.digit-clock__seconds {
+  font-family: "Digital-7";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 200px;
+ 
+}
+
+@media screen and (max-width: 690px) {
+  .digit-clock__seconds {
+    font-size: 150px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .digit-clock__seconds {
+    font-size: 100px;
+  }
+}

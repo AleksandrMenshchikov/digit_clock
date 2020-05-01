@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>digit clock</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body>
+  <div class="page">
+    <div class="container">
+      <div class="digit-clock">
+        <ul class="digit-clock__list">
+          <li class="digit-clock__item">ПН</li>
+          <li class="digit-clock__item">ВТ</li>
+          <li class="digit-clock__item">СР</li>
+          <li class="digit-clock__item">ЧТ</li>
+          <li class="digit-clock__item">ПТ</li>
+          <li class="digit-clock__item">СБ</li>
+          <li class="digit-clock__item">ВС</li>
+        </ul>
+        <div class="digit-clock__block">
+          <div class="digit-clock__hours">22</div>
+          <div class="digit-clock__colon">:</div>
+          <div class="digit-clock__minutes">22</div>
+          <div class="digit-clock__colon">:</div>
+          <div class="digit-clock__seconds">22</div>
+          <div class="digit-clock__am">AM</div>
+          <div class="digit-clock__pm">PM</div>
+        </div>
+        <div>
+          <span>ALARM CLOCK</span>
+          <button class="digit-clock__btn-toggle-off">OFF</button>
+          <button class="digit-clock__btn-toggle-on">ON</button>
+        </div>
+        <hr>
+        <span class="digit-clock__input-h">0</span>
+        <button class="digit-clock__btn-h-plus">+</button>
+        <button class="digit-clock__btn-h-minus">&ndash;</button>
+        <span>hours</span>
+        <span class="digit-clock__input-m">0</span>
+        <button class="digit-clock__btn-m-plus">+</button>
+        <button class="digit-clock__btn-m-minus">&ndash;</button>
+        <span>minutes</span>
+        <input type="radio" name="time" value="am" id="am" class="digit-clock__input-am">
+        <label for="am">AM</label>
+        <input type="radio" name="time" value="pm" id="pm" class="digit-clock__input-pm">
+        <label for="pm">PM</label>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="./scripts/script.js"></script>
+</body>
+
+</html>

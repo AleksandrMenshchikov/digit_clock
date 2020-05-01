@@ -1,0 +1,19 @@
+.digit-clock__colon {
+  font-family: "Digital-7";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 200px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 690px) {
+  .digit-clock__colon {
+    font-size: 150px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .digit-clock__colon {
+    font-size: 100px;
+  }
+}

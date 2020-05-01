@@ -1,0 +1,19 @@
+.digit-clock__minutes {
+  font-family: "Digital-7";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 200px;
+ 
+}
+
+@media screen and (max-width: 690px) {
+  .digit-clock__minutes {
+    font-size: 150px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .digit-clock__minutes {
+    font-size: 100px;
+  }
+}
