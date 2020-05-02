@@ -185,7 +185,7 @@ setInterval(() => {
   week[d - 1].classList.add("digit-clock__item_color");
 
   if (localStorage.on === "true") {
-    if (hours === +inputH && minutes === +inputM && localStorage.am) {
+    if (hours === +inputH.textContent && minutes === +inputM.textContent && localStorage.am) {
       runMusic();
     }
   }
