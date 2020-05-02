@@ -16,8 +16,9 @@
 @import "../digit-clock/__btn-toggle-on/digit-clock__btn-toggle-on.css";
 @import "../digit-clock/__btn-h-minus/digit-clock__btn-h-minus.css";
 @import "../digit-clock/__btn-m-minus/digit-clock__btn-m-minus.css";
-@import '../digit-clock/__input-am/digit-clock__input-am.css';
-@import '../digit-clock/__input-pm/digit-clock__input-pm.css';
+@import "../digit-clock/__input-am/digit-clock__input-am.css";
+@import "../digit-clock/__input-pm/digit-clock__input-pm.css";
+@import "../digit-clock/__bottom/digit-clock__bottom.css";
 
 .digit-clock {
   width: 70%;
@@ -31,9 +32,16 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .digit-clock {
+    width: 70%;
+  }
+}
+
 @media screen and (max-width: 520px) {
   .digit-clock {
     width: 80%;
   }
 }
+
 

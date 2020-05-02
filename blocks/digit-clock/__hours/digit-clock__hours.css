@@ -3,18 +3,25 @@
   font-weight: normal;
   font-style: normal;
   font-size: 200px;
-
 }
 
-@media screen and (max-width: 690px) {
+
+
+@media screen and (max-width: 890px) {
   .digit-clock__hours {
     font-size: 150px;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .digit-clock__hours {
     font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .digit-clock__hours {
+    font-size: 80px;
   }
 }
 

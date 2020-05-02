@@ -7,6 +7,14 @@
   color: black;
 }
 
+@media screen and (max-width: 890px) {
+  .digit-clock__pm {
+    right: -40px;
+    top: 65%;
+    font-size: 18px;
+  }
+}
+
 @media screen and (max-width: 690px) {
   .digit-clock__pm {
     right: -40px;
@@ -15,11 +23,20 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+
+@media screen and (max-width: 600px) {
   .digit-clock__pm {
     right: -30px;
     top: 63%;
     font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .digit-clock__pm {
+    right: -25px;
+    top: 63%;
+    font-size: 13px;
   }
 }
 
