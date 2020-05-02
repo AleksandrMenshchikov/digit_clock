@@ -199,6 +199,6 @@ setInterval(() => {
       runMusic();
     }
   }
-});
+}, 1000);
 
 console.log(localStorage);
