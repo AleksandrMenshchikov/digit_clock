@@ -16,6 +16,8 @@ const inputM = document.querySelector(".digit-clock__input-m");
 const inputAm = document.querySelector(".digit-clock__input-am");
 const inputPm = document.querySelector(".digit-clock__input-pm");
 const radioList = document.querySelectorAll('input[type="radio"]');
+const page = document.querySelector(".page");
+const spanMinutes = document.querySelector(".digit-clock__span-minutes");
 
 function runMusic() {
   if (localStorage.music == +inputM.textContent) {
@@ -182,10 +184,19 @@ setInterval(() => {
   for (let i of week) {
     i.classList.remove("digit-clock__item_color");
   }
-  week[d - 1].classList.add("digit-clock__item_color");
+
+  if (d === 0) {
+    week[6].classList.add("digit-clock__item_color");
+  } else {
+    week[d - 1].classList.add("digit-clock__item_color");
+  }
 
   if (localStorage.on === "true") {
-    if (hours === +inputH.textContent && minutes === +inputM.textContent && localStorage.am) {
+    if (
+      hours === +inputH.textContent &&
+      minutes === +inputM.textContent &&
+      localStorage.am
+    ) {
       runMusic();
     }
   }
@@ -200,5 +211,13 @@ setInterval(() => {
     }
   }
 }, 1000);
+
+window.addEventListener("resize", (e) => {
+  if (e.currentTarget.innerWidth < 350) {
+    spanMinutes.textContent = "min";
+  } else if (e.currentTarget.innerWidth >= 350) {
+    spanMinutes.textContent = "minutes";
+  }
+});
 
 console.log(localStorage);

@@ -19,6 +19,7 @@
 @import "../digit-clock/__input-am/digit-clock__input-am.css";
 @import "../digit-clock/__input-pm/digit-clock__input-pm.css";
 @import "../digit-clock/__bottom/digit-clock__bottom.css";
+@import "../digit-clock/__span-minutes/digit-clock__span-minutes.css";
 
 .digit-clock {
   width: 70%;
@@ -43,5 +44,3 @@
     width: 80%;
   }
 }
-
-
