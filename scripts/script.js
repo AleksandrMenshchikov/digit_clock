@@ -210,14 +210,12 @@ setInterval(() => {
       runMusic();
     }
   }
-}, 1000);
 
-window.addEventListener("resize", (e) => {
-  if (e.currentTarget.innerWidth < 350) {
+  if (digitClock.clientWidth < 279) {
     spanMinutes.textContent = "min";
-  } else if (e.currentTarget.innerWidth >= 350) {
+  } else {
     spanMinutes.textContent = "minutes";
   }
-});
+}, 1000);
 
 console.log(localStorage);
